@@ -22,7 +22,7 @@ Tema GRUB2 kustom bertema **UNSC** dan hologram **Cortana** (*Halo*), dioptimalk
 
 2. **Generate File Font `.pf2`**
    ```bash
-   sudo grub-mkfont -o /boot/grub/themes/unsc_cortana_buttons/UnscFont.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf --size=16
+   sudo grub-mkfont -o /boot/grub/themes/unsc_cortana/UnscFont.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf --size=16
    ```
 
 3. **Konfigurasi File `/etc/default/grub`**
