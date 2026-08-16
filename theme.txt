@@ -1,110 +1,28 @@
-# ==========================================================================
-#  GRUB2 Theme: UNSC / Cortana Interface (Horizontal Cards + Circular Buttons)
-#  Optimized for Ubuntu 26.04
-# ==========================================================================
+# UNSC Halo Master Chief & Cortana Theme
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-font: "Unifont Regular 16"
 
-desktop-resolution: "1920x1080"
-desktop-color: "#000814"
-terminal-font: "UnscFont 16"
-
-+ desktop_widget {
-    left = 0
-    top = 0
-    width = 100%
-    height = 100%
-    bg_color = "#000814"
++ boot_menu {
+    left = 20%
+    top = 40%
+    width = 60%
+    height = 30%
+    item_color = "#cccccc"
+    selected_item_color = "#32a852"
+    item_font = "Unifont Regular 16"
+    icon_width = 64
+    icon_height = 64
+    item_icon_space = 20
+    item_spacing = 15
 }
 
 + label {
-    left = 10%
-    top = 8%
-    width = 80%
-    height = 40px
-    text = "UNSC OS // PROTOCOL: SELECT OS & SYSTEM POWER"
-    font = "UnscFont 16"
-    color = "#8ab4f8"
-    align = "center"
-}
-
-# Row 1: Horizontal Boot Menu Cards
-+ boot_menu {
-    left = 10%
-    top = 22%
-    width = 80%
-    height = 42%
-    item_font = "UnscFont 16"
-    item_color = "#8ab4f8"
-    selected_item_color = "#ffffff"
-    item_width = 320
-    item_height = 240
-    item_spacing = 25
-    orient = "horizontal"
-    
-    bg_color = "#001d3d"
-    border_color = "#00b4d8"
-}
-
-# Row 2: Circular Control Buttons (Reboot, Shutdown, UEFI)
-+ hbox {
-    left = 38%
-    top = 68%
-    width = 24%
-    height = 50px
-    item_spacing = 30
-
-    + button {
-        left = 0
-        top = 0
-        width = 45
-        height = 45
-        text = "R"
-        font = "UnscFont 14"
-        color = "#ffffff"
-        selected_color = "#00b4d8"
-        bg_color = "#001d3d"
-        selected_bg_color = "#003566"
-        action = "reboot"
-    }
-
-    + button {
-        left = 0
-        top = 0
-        width = 45
-        height = 45
-        text = "S"
-        font = "UnscFont 14"
-        color = "#ffffff"
-        selected_color = "#ff4d4d"
-        bg_color = "#001d3d"
-        selected_bg_color = "#590d0d"
-        action = "halt"
-    }
-
-    + button {
-        left = 0
-        top = 0
-        width = 45
-        height = 45
-        text = "U"
-        font = "UnscFont 14"
-        color = "#ffffff"
-        selected_color = "#00f5d4"
-        bg_color = "#001d3d"
-        selected_bg_color = "#004d40"
-        action = "uefi"
-    }
-}
-
-+ progress_bar {
-    left = 25%
     top = 85%
-    width = 50%
-    height = 14px
-    id = "__timeout__"
-    bg_color = "#001d3d"
-    fg_color = "#00b4d8"
-    border_color = "#90e0ef"
-    text_color = "#ffffff"
-    font = "UnscFont 12"
-    text = "Booting selected system in %d seconds..."
+    left = 20%
+    width = 60%
+    align = "center"
+    color = "#32a852"
+    text = "[SYSTEM READY] Select OS or Tool. Press 'e' to edit."
 }

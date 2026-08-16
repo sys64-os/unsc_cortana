@@ -1,44 +1,36 @@
-# UNSC Cortana GRUB2 Theme (Horizontal Cards + Circular Action Buttons)
+# Halo GRUB2 Theme - UNSC HUD Edition
 
-Tema GRUB2 kustom bertema **UNSC** dan hologram **Cortana** (*Halo*), dioptimalkan untuk **Ubuntu 26.04** dengan **dua baris**: baris pertama berisi kartu pemilihan OS secara horizontal, dan baris kedua berisi **3 tombol berbentuk bulat kecil** untuk fungsi **Reboot (R)**, **Shutdown/Halt (S)**, dan **Boot to UEFI (U)**.
+Tema GRUB2 bernuansa sci-fi HUD yang terinspirasi dari antarmuka UNSC (Master Chief & Cortana) di Halo. Dibuat dan diuji secara khusus untuk **Ubuntu 26.04**.
 
-## Preview Tampilan
-![Preview Tema Tombol Bulat](./preview.png)
+## Preview
+![Preview Visual Tema Halo GRUB2](preview.png)
 
-## Fitur Utama
-- **Horizontal OS Cards:** Menu boot berbentuk kartu berdampingan.
-- **Circular Action Buttons:** 3 tombol bundar kompak di baris bawah untuk kontrol daya sistem (Reboot, Shutdown, UEFI).
-- **Ubuntu 26.04 Ready:** Desain antarmuka holografik futuristik yang kompatibel dengan resolusi tinggi.
+## Fitur
+* **Latar Belakang UNSC HUD:** Desain terminal hijau gelap bergaya Halo.
+* **OS Selection "Cards":** Tampilan simulasi kartu untuk OS Windows dan Linux (Ubuntu).
+* **Icon Tools Kustom:** Ikon utilitas bulat di baris simulasi kedua (Reboot, Shutdown, UEFI, Memtest, Recovery).
 
----
+## Cara Instalasi (Otomatis) di Ubuntu 26.04
 
-## Cara Pemasangan (Installation Guide)
+Kami telah menyediakan script `install.sh` untuk memudahkan proses pemasangan tema ini di Ubuntu Anda.
 
-1. **Salin Folder Tema**
-   Pindahkan folder tema ini ke direktori GRUB di sistem Linux Anda:
+1. Ekstrak file `.zip` ini ke sebuah folder.
+2. Buka terminal (`Ctrl+Alt+T`) dan navigasikan ke dalam folder hasil ekstraksi.
+3. Berikan izin eksekusi pada skrip installer dengan perintah:
    ```bash
-   sudo cp -r unsc_cortana_buttons /boot/grub/themes/
+   chmod +x install.sh
    ```
+4. Jalankan skrip instalasi dengan hak akses root:
+   ```bash
+   sudo ./install.sh
+   ```
+5. Tunggu proses instalasi dan pembaruan GRUB selesai. Setelah itu, *restart* PC Anda!
 
-2. **Generate File Font `.pf2`**
-   ```bash
-   sudo grub-mkfont -o /boot/grub/themes/unsc_cortana_buttons/UnscFont.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf --size=16
-   ```
+## Cara Instalasi (Manual)
+1. Pindahkan seluruh isi folder ini ke `/boot/grub/themes/halo_theme` (gunakan `sudo`).
+2. Buka file konfigurasi GRUB: `sudo nano /etc/default/grub`
+3. Tambahkan baris: `GRUB_THEME="/boot/grub/themes/halo_theme/theme.txt"`
+4. Perbarui GRUB: `sudo update-grub`
 
-3. **Konfigurasi File `/etc/default/grub`**
-   ```bash
-   sudo nano /etc/default/grub
-   ```
-   Tambahkan baris berikut:
-   ```bash
-   GRUB_GFXMODE=1920x1080,auto
-   GRUB_GFXPAYLOAD_LINUX=keep
-   GRUB_TIMEOUT_STYLE="menu"
-   GRUB_TIMEOUT="10"
-   GRUB_THEME="/boot/grub/themes/unsc_cortana_buttons/theme.txt"
-   ```
-
-4. **Perbarui GRUB**
-   ```bash
-   sudo update-grub
-   ```
+*Peringatan Layout:*
+GRUB2 secara default merender daftar menu dalam satu kolom vertikal. Desain kartu dan baris-kedua pada tema ini memanfaatkan manipulasi ruang dan bentuk ikon. Untuk pengalaman *grid* yang sesungguhnya, kami menyarankan penggunaan rEFInd Boot Manager.
