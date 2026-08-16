@@ -3,12 +3,10 @@
 #  Inspirasi Desain: Antarmuka Teknologi Militer UNSC & Hologram AI Cortana
 # ==========================================================================
 
-# Pengaturan Resolusi dan Warna Dasar Layar
 desktop-resolution: "1920x1080"
 desktop-color: "#000814"
 terminal-font: "UnscFont 16"
 
-# Gambar Latar Belakang (Pastikan file background.png tersedia di direktori yang sama)
 + desktop_widget {
     left = 0
     top = 0
@@ -17,7 +15,6 @@ terminal-font: "UnscFont 16"
     bg_color = "#000814"
 }
 
-# Judul / Header Tema ala Panel Diagnostik UNSC
 + label {
     left = 15%
     top = 10%
@@ -29,7 +26,6 @@ terminal-font: "UnscFont 16"
     align = "center"
 }
 
-# Kotak Menu Utama (Boot Menu) dengan Card Layout Holografik
 + boot_menu {
     left = 20%
     top = 25%
@@ -39,16 +35,10 @@ terminal-font: "UnscFont 16"
     item_color = "#8ab4f8"
     selected_item_color = "#ffffff"
     item_spacing = 15
-    
-    # Warna latar belakang area menu transparan gelap dengan aksen garis
     bg_color = "#001d3d"
     border_color = "#00b4d8"
-    
-    # Gaya item yang dipilih (bisa dikustomisasi menggunakan pixmap)
-    selected_item_pixmap_style = "select_*.png"
 }
 
-# Bar Progress Waktu Tunggu (Timeout Progress Bar)
 + progress_bar {
     left = 20%
     top = 85%
