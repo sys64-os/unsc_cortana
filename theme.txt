@@ -1,5 +1,5 @@
 # ==========================================================================
-#  GRUB2 Theme: UNSC / Cortana Interface (Card-Style OS Selection)
+#  GRUB2 Theme: UNSC / Cortana Interface (Horizontal Card Selection)
 #  Optimized for Ubuntu 26.04
 # ==========================================================================
 
@@ -16,32 +16,37 @@ terminal-font: "UnscFont 16"
 }
 
 + label {
-    left = 15%
-    top = 8%
-    width = 70%
+    left = 10%
+    top = 10%
+    width = 80%
     height = 40px
-    text = "UNSC OS // SELECT OPERATING SYSTEM PROTOCOL"
+    text = "UNSC OS // HORIZONTAL PROTOCOL: SELECT OPERATING SYSTEM"
     font = "UnscFont 16"
     color = "#8ab4f8"
     align = "center"
 }
 
+# Horizontal Boot Menu layout
 + boot_menu {
-    left = 25%
-    top = 22%
-    width = 50%
-    height = 60%
+    left = 10%
+    top = 30%
+    width = 80%
+    height = 40%
     item_font = "UnscFont 16"
     item_color = "#8ab4f8"
     selected_item_color = "#ffffff"
-    item_spacing = 20
+    item_width = 320
+    item_height = 240
+    item_spacing = 25
+    orient = "horizontal"
+    
     bg_color = "#001d3d"
     border_color = "#00b4d8"
 }
 
 + progress_bar {
     left = 25%
-    top = 86%
+    top = 82%
     width = 50%
     height = 14px
     id = "__timeout__"
@@ -50,5 +55,5 @@ terminal-font: "UnscFont 16"
     border_color = "#90e0ef"
     text_color = "#ffffff"
     font = "UnscFont 12"
-    text = "Booting selected OS in %d seconds..."
+    text = "Booting selected system in %d seconds..."
 }
