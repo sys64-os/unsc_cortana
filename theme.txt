@@ -2,7 +2,6 @@
 title-text: ""
 desktop-image: "background.png"
 desktop-color: "#000000"
-terminal-font: "Unifont Regular 16"
 
 + boot_menu {
     left = 20%
@@ -11,7 +10,6 @@ terminal-font: "Unifont Regular 16"
     height = 30%
     item_color = "#cccccc"
     selected_item_color = "#32a852"
-    item_font = "Unifont Regular 16"
     icon_width = 64
     icon_height = 64
     item_icon_space = 20
