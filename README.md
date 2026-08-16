@@ -1,14 +1,14 @@
-# UNSC Cortana GRUB2 Theme (Horizontal Card Layout)
+# UNSC Cortana GRUB2 Theme (Horizontal Cards + Circular Action Buttons)
 
-Tema GRUB2 kustom bertema teknologi militer **UNSC** dan hologram **Cortana** (*Halo*), dioptimalkan untuk **Ubuntu 26.04** dengan tata letak pilihan sistem operasi mendatar secara **horizontal (side-by-side cards)**.
+Tema GRUB2 kustom bertema **UNSC** dan hologram **Cortana** (*Halo*), dioptimalkan untuk **Ubuntu 26.04** dengan **dua baris**: baris pertama berisi kartu pemilihan OS secara horizontal, dan baris kedua berisi **3 tombol berbentuk bulat kecil** untuk fungsi **Reboot (R)**, **Shutdown/Halt (S)**, dan **Boot to UEFI (U)**.
 
-## Preview Tampilan Horizontal
-![Preview Tema Horizontal](./preview.png)
+## Preview Tampilan
+![Preview Tema Tombol Bulat](./preview.png)
 
 ## Fitur Utama
-- **Horizontal Card Layout:** Kartu pemilihan sistem operasi disusun berdampingan secara horizontal (`orient = "horizontal"`).
-- **Estetika Hologram UNSC:** Aksen warna biru terang dan latar belakang konsol militer masa depan.
-- **Ubuntu 26.04 Ready:** Mendukung resolusi tinggi dan framebuffer modern.
+- **Horizontal OS Cards:** Menu boot berbentuk kartu berdampingan.
+- **Circular Action Buttons:** 3 tombol bundar kompak di baris bawah untuk kontrol daya sistem (Reboot, Shutdown, UEFI).
+- **Ubuntu 26.04 Ready:** Desain antarmuka holografik futuristik yang kompatibel dengan resolusi tinggi.
 
 ---
 
@@ -17,12 +17,12 @@ Tema GRUB2 kustom bertema teknologi militer **UNSC** dan hologram **Cortana** (*
 1. **Salin Folder Tema**
    Pindahkan folder tema ini ke direktori GRUB di sistem Linux Anda:
    ```bash
-   sudo cp -r unsc_cortana_horizontal /boot/grub/themes/
+   sudo cp -r unsc_cortana_buttons /boot/grub/themes/
    ```
 
 2. **Generate File Font `.pf2`**
    ```bash
-   sudo grub-mkfont -o /boot/grub/themes/unsc_cortana_horizontal/UnscFont.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf --size=16
+   sudo grub-mkfont -o /boot/grub/themes/unsc_cortana_buttons/UnscFont.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf --size=16
    ```
 
 3. **Konfigurasi File `/etc/default/grub`**
@@ -35,7 +35,7 @@ Tema GRUB2 kustom bertema teknologi militer **UNSC** dan hologram **Cortana** (*
    GRUB_GFXPAYLOAD_LINUX=keep
    GRUB_TIMEOUT_STYLE="menu"
    GRUB_TIMEOUT="10"
-   GRUB_THEME="/boot/grub/themes/unsc_cortana_horizontal/theme.txt"
+   GRUB_THEME="/boot/grub/themes/unsc_cortana_buttons/theme.txt"
    ```
 
 4. **Perbarui GRUB**

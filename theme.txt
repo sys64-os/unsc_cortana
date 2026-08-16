@@ -1,5 +1,5 @@
 # ==========================================================================
-#  GRUB2 Theme: UNSC / Cortana Interface (Horizontal Card Selection)
+#  GRUB2 Theme: UNSC / Cortana Interface (Horizontal Cards + Circular Buttons)
 #  Optimized for Ubuntu 26.04
 # ==========================================================================
 
@@ -17,21 +17,21 @@ terminal-font: "UnscFont 16"
 
 + label {
     left = 10%
-    top = 10%
+    top = 8%
     width = 80%
     height = 40px
-    text = "UNSC OS // HORIZONTAL PROTOCOL: SELECT OPERATING SYSTEM"
+    text = "UNSC OS // PROTOCOL: SELECT OS & SYSTEM POWER"
     font = "UnscFont 16"
     color = "#8ab4f8"
     align = "center"
 }
 
-# Horizontal Boot Menu layout
+# Row 1: Horizontal Boot Menu Cards
 + boot_menu {
     left = 10%
-    top = 30%
+    top = 22%
     width = 80%
-    height = 40%
+    height = 42%
     item_font = "UnscFont 16"
     item_color = "#8ab4f8"
     selected_item_color = "#ffffff"
@@ -44,9 +44,60 @@ terminal-font: "UnscFont 16"
     border_color = "#00b4d8"
 }
 
+# Row 2: Circular Control Buttons (Reboot, Shutdown, UEFI)
++ hbox {
+    left = 38%
+    top = 68%
+    width = 24%
+    height = 50px
+    item_spacing = 30
+
+    + button {
+        left = 0
+        top = 0
+        width = 45
+        height = 45
+        text = "R"
+        font = "UnscFont 14"
+        color = "#ffffff"
+        selected_color = "#00b4d8"
+        bg_color = "#001d3d"
+        selected_bg_color = "#003566"
+        action = "reboot"
+    }
+
+    + button {
+        left = 0
+        top = 0
+        width = 45
+        height = 45
+        text = "S"
+        font = "UnscFont 14"
+        color = "#ffffff"
+        selected_color = "#ff4d4d"
+        bg_color = "#001d3d"
+        selected_bg_color = "#590d0d"
+        action = "halt"
+    }
+
+    + button {
+        left = 0
+        top = 0
+        width = 45
+        height = 45
+        text = "U"
+        font = "UnscFont 14"
+        color = "#ffffff"
+        selected_color = "#00f5d4"
+        bg_color = "#001d3d"
+        selected_bg_color = "#004d40"
+        action = "uefi"
+    }
+}
+
 + progress_bar {
     left = 25%
-    top = 82%
+    top = 85%
     width = 50%
     height = 14px
     id = "__timeout__"
