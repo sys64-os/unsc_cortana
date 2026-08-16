@@ -1,18 +1,18 @@
-# Halo GRUB2 Theme - Ultimate Edition (Bug Free)
+# Halo GRUB2 Theme - Neon Green Glow & Centered Icons Edition
 
-Tema GRUB2 bernuansa sci-fi HUD dengan dukungan 11+ OS Icon Cards berwarna putih, bersih dari *bug* font dan konfigurasi sistem.
-
-## Changelog Ultimate:
-1. **Font Bug Fixed:** Konfigurasi kustom font (`item_font`) yang memicu error font hilang (`.pf2` missing) telah dihapus agar mengandalkan font bawaan sistem yang stabil.
-2. **Hidden Menu Fixed:** Skrip kini memastikan `GRUB_TIMEOUT_STYLE=menu` aktif.
-3. **Console Output Fixed:** Skrip mem-bypass parameter `GRUB_TERMINAL_OUTPUT="console"` yang kerap mencegah render antarmuka grafis.
+Tema GRUB2 bernuansa UNSC Halo dengan ikon yang diposisikan di tengah card, serta efek sorotan *outline* hijau neon (`#32a852`) dan background transparan hijau pada card yang sedang aktif (*selected*).
 
 ## Preview Visual Tema
 ![Preview Visual Tema Halo GRUB2](preview.png)
 
+## Fitur Pembaruan:
+* **Icon Centering:** Posisi ikon dan teks di dalam card tersusun rapi di tengah.
+* **Neon Selection Glow:** Card yang terseleksi memancarkan sorotan outline warna hijau neon dengan transparansi latar hijau gelap yang elegan.
+* **Bug Free Installer:** Kompatibel dengan berbagai distro Linux (Ubuntu, Arch, Fedora, dll).
+
 ## Cara Instalasi
 1. Ekstrak `.zip` ini.
-2. Buka terminal di dalam folder ekstraksi.
-3. Eksekusi: `chmod +x install.sh`
-4. Instal: `sudo ./install.sh`
-5. Restart komputer Anda.
+2. Buka terminal di folder hasil ekstraksi.
+3. Jalankan: `chmod +x install.sh`
+4. Jalankan perintah instalasi: `sudo ./install.sh`
+5. *Restart* PC Anda.

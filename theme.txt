@@ -1,4 +1,4 @@
-# UNSC Halo Master Chief & Cortana Theme
+# UNSC Halo Master Chief & Cortana Theme (Neon Green Selected Glow)
 title-text: ""
 desktop-image: "background.png"
 desktop-color: "#000000"
@@ -10,6 +10,8 @@ desktop-color: "#000000"
     height = 30%
     item_color = "#cccccc"
     selected_item_color = "#32a852"
+    selected_item_pixmap_style = "data/sel_box_*.png"
+    item_pixmap_style = ""
     icon_width = 64
     icon_height = 64
     item_icon_space = 20
