@@ -26,7 +26,6 @@ terminal-font: "UnscFont 16"
     align = "center"
 }
 
-# Boot menu configured with structured card-like spacing
 + boot_menu {
     left = 25%
     top = 22%
@@ -36,8 +35,6 @@ terminal-font: "UnscFont 16"
     item_color = "#8ab4f8"
     selected_item_color = "#ffffff"
     item_spacing = 20
-    
-    # Holographic card look background
     bg_color = "#001d3d"
     border_color = "#00b4d8"
 }

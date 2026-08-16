@@ -1,22 +1,47 @@
-# unsc_cortana
-Grub2 Themes unsc Cortana 
-UNSC Cortana GRUB2 Theme
-========================
+# UNSC Cortana GRUB2 Theme
 
-Cara Pemasangan:
-1. Salin folder 'unsc_cortana' ke direktori /boot/grub/themes/ di sistem Linux Anda:
-   sudo cp -r unsc_cortana /boot/grub/themes/
+Tema GRUB2 kustom dengan estetika antarmuka teknologi militer **UNSC** dan hologram **Cortana** dari semesta *Halo*, dioptimalkan khusus untuk **Ubuntu 26.04**.
 
-2. Untuk membuat file font.pf2 yang valid (karena format .pf2 adalah biner khusus GRUB), 
-   jalankan perintah berikut di terminal Linux Anda menggunakan font sistem berformat .ttf:
-   grub-mkfont -o /boot/grub/themes/unsc_cortana/font.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf --size=16
+## Preview Tampilan
+![Preview Tema GRUB2](./preview.png)
 
-3. Edit file konfigurasi GRUB:
+## Fitur Utama
+- **Card-Style OS Selection:** Tata letak menu boot dirancang per item di dalam kartu/panel terpisah agar pemilihan sistem operasi terlihat rapi dan futuristik.
+- **Palet Warna Hologram:** Didominasi warna biru khas sistem holografik AI Cortana (`#8ab4f8` dan `#00b4d8`) di atas latar belakang gelap militer.
+- **Ubuntu 26.04 Optimized:** Kompatibel penuh dengan resolusi layar tinggi dan konfigurasi framebuffer modern.
+
+---
+
+## Cara Pemasangan (Installation Guide)
+
+1. **Salin Folder Tema**
+   Pindahkan folder tema ini ke direktori GRUB di sistem Linux Anda:
+   ```bash
+   sudo cp -r unsc_cortana_cards /boot/grub/themes/
+   ```
+
+2. **Generate File Font `.pf2`**
+   GRUB memerlukan format font khusus `.pf2`. Buat file font dari font sistem Anda (misalnya DejaVuSans-Bold atau font truetype lainnya) menggunakan perintah:
+   ```bash
+   sudo grub-mkfont -o /boot/grub/themes/unsc_cortana_cards/UnscFont.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf --size=16
+   ```
+
+3. **Konfigurasi File `/etc/default/grub`**
+   Buka file konfigurasi GRUB menggunakan editor teks:
+   ```bash
    sudo nano /etc/default/grub
-   Tambahkan baris berikut:
-   GRUB_THEME="/boot/grub/themes/unsc_cortana/theme.txt"
+   ```
+   Tambahkan atau sesuaikan baris berikut:
+   ```bash
+   GRUB_GFXMODE=1920x1080,auto
+   GRUB_GFXPAYLOAD_LINUX=keep
    GRUB_TIMEOUT_STYLE="menu"
+   GRUB_TIMEOUT="10"
+   GRUB_THEME="/boot/grub/themes/unsc_cortana_cards/theme.txt"
+   ```
 
-4. Perbarui GRUB:
-   sudo update-grub  (atau sudo grub-mkconfig -o /boot/grub/grub.cfg)
-
+4. **Perbarui GRUB**
+   Terapkan perubahan pada sistem Anda:
+   ```bash
+   sudo update-grub
+   ```
