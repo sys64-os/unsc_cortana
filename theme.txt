@@ -1,6 +1,6 @@
 # ==========================================================================
-#  GRUB2 Theme: UNSC / Cortana Interface
-#  Inspirasi Desain: Antarmuka Teknologi Militer UNSC & Hologram AI Cortana
+#  GRUB2 Theme: UNSC / Cortana Interface (Card-Style OS Selection)
+#  Optimized for Ubuntu 26.04
 # ==========================================================================
 
 desktop-resolution: "1920x1080"
@@ -17,38 +17,41 @@ terminal-font: "UnscFont 16"
 
 + label {
     left = 15%
-    top = 10%
+    top = 8%
     width = 70%
     height = 40px
-    text = "UNSC OS // SYSTEM BOOT - MASTER CHIEF & CORTANA PROTOCOL"
+    text = "UNSC OS // SELECT OPERATING SYSTEM PROTOCOL"
     font = "UnscFont 16"
     color = "#8ab4f8"
     align = "center"
 }
 
+# Boot menu configured with structured card-like spacing
 + boot_menu {
-    left = 20%
-    top = 25%
-    width = 60%
-    height = 55%
+    left = 25%
+    top = 22%
+    width = 50%
+    height = 60%
     item_font = "UnscFont 16"
     item_color = "#8ab4f8"
     selected_item_color = "#ffffff"
-    item_spacing = 15
+    item_spacing = 20
+    
+    # Holographic card look background
     bg_color = "#001d3d"
     border_color = "#00b4d8"
 }
 
 + progress_bar {
-    left = 20%
-    top = 85%
-    width = 60%
-    height = 15px
+    left = 25%
+    top = 86%
+    width = 50%
+    height = 14px
     id = "__timeout__"
     bg_color = "#001d3d"
     fg_color = "#00b4d8"
     border_color = "#90e0ef"
     text_color = "#ffffff"
     font = "UnscFont 12"
-    text = "Booting in %d seconds..."
+    text = "Booting selected OS in %d seconds..."
 }

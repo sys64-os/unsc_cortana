@@ -1,19 +1,22 @@
-UNSC Cortana GRUB2 Theme
-========================
+UNSC Cortana GRUB2 Theme - Card OS Selection Edition (Ubuntu 26.04)
+=====================================================================
+
+Fitur:
+- Tata letak menu boot dirancang per item (card-style layout) agar pilihan sistem operasi tampil terpisah secara rapi dan elegan.
+- Dioptimalkan untuk Ubuntu 26.04 dengan palet warna biru holografik UNSC.
 
 Cara Pemasangan:
-1. Salin folder 'unsc_cortana' ke direktori /boot/grub/themes/ di sistem Linux Anda:
-   sudo cp -r unsc_cortana /boot/grub/themes/
+1. Pindahkan folder 'unsc_cortana_cards' ke direktori tema GRUB Anda:
+   sudo cp -r unsc_cortana_cards /boot/grub/themes/
 
-2. Untuk membuat file font.pf2 yang valid (karena format .pf2 adalah biner khusus GRUB), 
-   jalankan perintah berikut di terminal Linux Anda menggunakan font sistem berformat .ttf:
-   grub-mkfont -o /boot/grub/themes/unsc_cortana/font.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf --size=16
+2. Buat file font .pf2 yang valid di dalam folder tersebut menggunakan font truetype Anda:
+   sudo grub-mkfont -o /boot/grub/themes/unsc_cortana_cards/UnscFont.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf --size=16
 
-3. Edit file konfigurasi GRUB:
-   sudo nano /etc/default/grub
-   Tambahkan baris berikut:
-   GRUB_THEME="/boot/grub/themes/unsc_cortana/theme.txt"
+3. Konfigurasikan /etc/default/grub:
+   GRUB_GFXMODE=1920x1080,auto
+   GRUB_GFXPAYLOAD_LINUX=keep
    GRUB_TIMEOUT_STYLE="menu"
+   GRUB_THEME="/boot/grub/themes/unsc_cortana_cards/theme.txt"
 
-4. Perbarui GRUB:
-   sudo update-grub  (atau sudo grub-mkconfig -o /boot/grub/grub.cfg)
+4. Perbarui konfigurasi GRUB:
+   sudo update-grub
